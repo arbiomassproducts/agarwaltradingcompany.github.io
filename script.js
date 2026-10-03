@@ -1,201 +1,267 @@
-/* =================================
-   AGARWAL TRADING COMPANY
-   Website JavaScript
-================================= */
+// ======================================================
+// AGARWAL TRADING COMPANY
+// WhatsApp Inquiry + Catalog System
+// ======================================================
 
-document.addEventListener("DOMContentLoaded", function () {
 
-    /* ================================
-       MOBILE MENU
-    ================================= */
+// ================= WHATSAPP NUMBER =================
 
-    const menuToggle = document.querySelector(".menu-toggle");
-    const navLinks = document.querySelector(".nav-links");
+// India country code +91
+// ATC number: 9837591626
 
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener("click", function () {
-            navLinks.classList.toggle("active");
-        });
+const whatsappNumber = "919837591626";
 
-        // Close menu when a link is clicked
-        document.querySelectorAll(".nav-links a").forEach(function (link) {
-            link.addEventListener("click", function () {
-                navLinks.classList.remove("active");
-            });
-        });
+
+// ======================================================
+// WHATSAPP INQUIRY FUNCTION
+// ======================================================
+
+function inquireProduct(productName) {
+
+    const message =
+`Hello Agarwal Trading Company,
+I want to inquire about ${productName}.
+Brand:
+Type:`;
+
+    const whatsappURL =
+        "https://wa.me/" +
+        whatsappNumber +
+        "?text=" +
+        encodeURIComponent(message);
+
+    window.open(whatsappURL, "_blank");
+}
+
+
+// ======================================================
+// MOBILE MENU
+// ======================================================
+
+function toggleMenu() {
+
+    const navbar = document.getElementById("navbar");
+
+    if (navbar) {
+        navbar.classList.toggle("active");
     }
+}
 
 
-    /* ================================
-       PRODUCT INQUIRY
-    ================================= */
+// Close mobile menu after clicking a navigation link
 
-    const inquiryButtons = document.querySelectorAll(".inquire-btn");
+document.querySelectorAll(".navbar a").forEach(function(link) {
 
-    inquiryButtons.forEach(function (button) {
+    link.addEventListener("click", function() {
 
-        button.addEventListener("click", function (event) {
+        const navbar = document.getElementById("navbar");
 
-            event.preventDefault();
-
-            const productCard = button.closest(".product-card");
-
-            if (!productCard) return;
-
-            const productNameElement = productCard.querySelector("h3");
-
-            if (!productNameElement) return;
-
-            const productName = productNameElement.textContent.trim();
-
-            const phoneNumber = "919837591626";
-
-            const message =
-                "Hello Agarwal Trading Company,%0A%0A" +
-                "I am interested in the following product:%0A" +
-                "Product: " + encodeURIComponent(productName) + "%0A%0A" +
-                "Please share more details about this product.";
-
-            const whatsappURL =
-                "https://wa.me/" + phoneNumber + "?text=" + message;
-
-            window.open(whatsappURL, "_blank");
-        });
-
-    });
-
-
-    /* ================================
-       SMOOTH SCROLL
-    ================================= */
-
-    document.querySelectorAll('a[href^="#"]').forEach(function (link) {
-
-        link.addEventListener("click", function (event) {
-
-            const targetID = this.getAttribute("href");
-
-            if (targetID === "#") return;
-
-            const target = document.querySelector(targetID);
-
-            if (target) {
-                event.preventDefault();
-
-                target.scrollIntoView({
-                    behavior: "smooth",
-                    block: "start"
-                });
-            }
-
-        });
-
-    });
-
-
-    /* ================================
-       CONTACT FORM
-    ================================= */
-
-    const contactForm = document.querySelector(".contact-form");
-
-    if (contactForm) {
-
-        contactForm.addEventListener("submit", function (event) {
-
-            event.preventDefault();
-
-            const nameInput =
-                contactForm.querySelector('input[name="name"]');
-
-            const phoneInput =
-                contactForm.querySelector('input[name="phone"]');
-
-            const messageInput =
-                contactForm.querySelector("textarea");
-
-            const name =
-                nameInput ? nameInput.value.trim() : "";
-
-            const phone =
-                phoneInput ? phoneInput.value.trim() : "";
-
-            const message =
-                messageInput ? messageInput.value.trim() : "";
-
-            if (!name || !phone || !message) {
-                alert("Please fill in all the required details.");
-                return;
-            }
-
-            const whatsappMessage =
-                "Hello Agarwal Trading Company,%0A%0A" +
-                "Name: " + encodeURIComponent(name) + "%0A" +
-                "Phone: " + encodeURIComponent(phone) + "%0A" +
-                "Message: " + encodeURIComponent(message);
-
-            const whatsappURL =
-                "https://wa.me/919837591626?text=" +
-                whatsappMessage;
-
-            window.open(whatsappURL, "_blank");
-
-            contactForm.reset();
-        });
-
-    }
-
-
-    /* ================================
-       CURRENT YEAR
-    ================================= */
-
-    const yearElement = document.querySelector("#current-year");
-
-    if (yearElement) {
-        yearElement.textContent = new Date().getFullYear();
-    }
-
-
-    /* ================================
-       SCROLL REVEAL
-    ================================= */
-
-    const revealElements =
-        document.querySelectorAll(
-            ".product-card, .feature-card, .about-content, .about-image, .catalog-box"
-        );
-
-    const revealObserver = new IntersectionObserver(
-        function (entries) {
-
-            entries.forEach(function (entry) {
-
-                if (entry.isIntersecting) {
-
-                    entry.target.style.opacity = "1";
-                    entry.target.style.transform = "translateY(0)";
-
-                    revealObserver.unobserve(entry.target);
-                }
-
-            });
-
-        },
-        {
-            threshold: 0.12
+        if (navbar) {
+            navbar.classList.remove("active");
         }
-    );
-
-    revealElements.forEach(function (element) {
-
-        element.style.opacity = "0";
-        element.style.transform = "translateY(25px)";
-        element.style.transition =
-            "opacity 0.6s ease, transform 0.6s ease";
-
-        revealObserver.observe(element);
 
     });
 
 });
+
+
+// ======================================================
+// CURRENT YEAR
+// ======================================================
+
+const yearElement = document.getElementById("year");
+
+if (yearElement) {
+
+    yearElement.textContent =
+        new Date().getFullYear();
+
+}
+
+
+// ======================================================
+// TOILET SEAT CATALOG
+// ======================================================
+//
+// IMPORTANT:
+//
+// Do NOT add prices here.
+//
+// When you give me the actual catalog,
+// we will put the toilet-seat products here.
+//
+// Each product can contain:
+//
+// image
+// name
+// description
+// specifications
+//
+// The images can also be embedded directly into
+// this JavaScript file so that separate image
+// files are not required.
+//
+// ======================================================
+
+
+const toiletSeatCatalog = [
+
+    /*
+    Example format:
+
+    {
+        name: "Product Name",
+
+        image: "data:image/jpeg;base64,......",
+
+        description:
+            "Short description of the product.",
+
+        specifications:
+            "Important specifications of the product."
+    }
+
+    */
+
+];
+
+
+// ======================================================
+// LOAD CATALOG
+// ======================================================
+
+function loadCatalog() {
+
+    const container =
+        document.getElementById("catalog-container");
+
+    const empty =
+        document.getElementById("catalog-empty");
+
+
+    // If catalog container doesn't exist
+    if (!container) {
+        return;
+    }
+
+
+    // If there are no catalog products yet
+    if (toiletSeatCatalog.length === 0) {
+
+        if (empty) {
+            empty.style.display = "block";
+        }
+
+        return;
+    }
+
+
+    // Hide "Catalog Coming Soon"
+    if (empty) {
+        empty.style.display = "none";
+    }
+
+
+    // Clear existing content
+    container.innerHTML = "";
+
+
+    // Create every catalog product
+    toiletSeatCatalog.forEach(function(product) {
+
+        const card =
+            document.createElement("article");
+
+        card.className =
+            "catalog-product";
+
+
+        // Product image
+        const image =
+            product.image || "";
+
+
+        // Product name
+        const name =
+            product.name || "Product";
+
+
+        // Product description
+        const description =
+            product.description || "";
+
+
+        // Product specifications
+        const specifications =
+            product.specifications || "";
+
+
+        card.innerHTML = `
+
+            <div class="catalog-product-image">
+
+                <img
+                    src="${image}"
+                    alt="${name}"
+                    loading="lazy">
+
+            </div>
+
+
+            <div class="catalog-product-info">
+
+                <h3>
+                    ${name}
+                </h3>
+
+
+                <p>
+                    ${description}
+                </p>
+
+
+                ${
+                    specifications
+                    ?
+                    `
+                    <p class="specifications">
+                        ${specifications}
+                    </p>
+                    `
+                    :
+                    ""
+                }
+
+
+                <button
+                    class="inquire-btn"
+                    onclick="inquireProduct(${JSON.stringify(name)})">
+
+                    Inquire About This Product
+
+                </button>
+
+            </div>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+// ======================================================
+// START WEBSITE
+// ======================================================
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function() {
+
+        loadCatalog();
+
+    }
+);
