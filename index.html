@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Agarwal Trading Company | Built for Better Living</title>
+
+    <meta name="description"
+        content="Agarwal Trading Company - Pipes, fittings, sanitaryware, faucets, basins and plumbing solutions.">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <a href="#home" class="logo-link">
+            <img src="images/logo.png"
+                 alt="Agarwal Trading Company Logo"
+                 class="logo">
+        </a>
+
+        <nav class="navbar" id="navbar">
+
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#products">Products</a>
+            <a href="#catalog">Catalog</a>
+            <a href="#why-us">Why Us</a>
+            <a href="#contact">Contact</a>
+
+        </nav>
+
+        <button class="menu-btn"
+                onclick="toggleMenu()"
+                aria-label="Open Menu">
+            ☰
+        </button>
+
+    </header>
+
+
+    <!-- ================= HERO ================= -->
+
+    <section id="home" class="hero">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="hero-label">
+                AGARWAL TRADING COMPANY
+            </p>
+
+            <h1>
+                Built for<br>
+                Better Living.
+            </h1>
+
+            <p class="hero-text">
+                Quality piping, plumbing and sanitaryware solutions
+                for homes, businesses, agriculture and infrastructure.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#products" class="btn primary-btn">
+                    Explore Products
+                </a>
+
+                <a href="#contact" class="btn secondary-btn">
+                    Contact Us
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= ABOUT ================= -->
+
+    <section id="about" class="section about-section">
+
+        <div class="section-heading">
+
+            <span class="section-label">ABOUT US</span>
+
+            <h2>
+                A Reliable Name in Plumbing & Sanitaryware
+            </h2>
+
+        </div>
+
+        <div class="about-grid">
+
+            <div class="about-text">
+
+                <p>
+                    Agarwal Trading Company offers a wide range of
+                    piping, plumbing and sanitaryware products for
+                    different customer requirements.
+                </p>
+
+                <p>
+                    Our product range covers pipes and fittings,
+                    agricultural and borewell products, faucets,
+                    showers, accessories, basins, vanity cabinets
+                    and toilet solutions.
+                </p>
+
+                <p>
+                    Customers can explore our main product categories
+                    and directly inquire about the brand and type
+                    they require.
+                </p>
+
+            </div>
+
+            <div class="about-highlight">
+
+                <div class="highlight-number">
+                    ATC
+                </div>
+
+                <h3>
+                    Built for Better Living.
+                </h3>
+
+                <p>
+                    Plumbing and sanitaryware solutions for
+                    different requirements.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= PRODUCTS ================= -->
+
+    <section id="products" class="section products-section">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                OUR PRODUCTS
+            </span>
+
+            <h2>
+                Explore Our Product Categories
+            </h2>
+
+            <p>
+                Choose a category to learn more or inquire about
+                the products you require.
+            </p>
+
+        </div>
+
+
+        <div class="products-grid">
+
+
+            <!-- 1 CPVC -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/cpvc.jpg"
+                         alt="CPVC Pipes and Fittings">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">01</span>
+
+                    <h3>
+                        CPVC Pipes & Fittings
+                    </h3>
+
+                    <p>
+                        CPVC piping and fittings for suitable
+                        plumbing and water supply applications.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('CPVC Pipes & Fittings')">
+                        Inquire About CPVC
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 2 UPVC -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/upvc.jpg"
+                         alt="UPVC Pipes and Fittings">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">02</span>
+
+                    <h3>
+                        UPVC Pipes & Fittings
+                    </h3>
+
+                    <p>
+                        UPVC piping and fittings for suitable
+                        plumbing and utility applications.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('UPVC Pipes & Fittings')">
+                        Inquire About UPVC
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 3 SWR -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/swr.jpg"
+                         alt="SWR Pipes and Fittings">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">03</span>
+
+                    <h3>
+                        SWR Pipes & Fittings
+                    </h3>
+
+                    <p>
+                        SWR piping and fittings for drainage
+                        and waste-water applications.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('SWR Pipes & Fittings')">
+                        Inquire About SWR
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 4 Agricultural -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/agriculture.jpg"
+                         alt="Agricultural Pipes and Fittings">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">04</span>
+
+                    <h3>
+                        Agricultural Pipes & Fittings
+                    </h3>
+
+                    <p>
+                        Piping solutions for agricultural
+                        irrigation and related requirements.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('Agricultural Pipes & Fittings')">
+                        Inquire About Agricultural
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 5 ASTM -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/astm.jpg"
+                         alt="ASTM Threaded Pipes">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">05</span>
+
+                    <h3>
+                        ASTM Threaded Pipes
+                    </h3>
+
+                    <p>
+                        Threaded pipe solutions for applications
+                        requiring suitable threaded connections.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('ASTM Threaded Pipes')">
+                        Inquire About ASTM Pipes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 6 Ribbed Strainer -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/ribbed-strainer.jpg"
+                         alt="Ribbed Strainer Pipes">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">06</span>
+
+                    <h3>
+                        Ribbed Strainer Pipes
+                    </h3>
+
+                    <p>
+                        Strainer pipe solutions for suitable
+                        water and borewell applications.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('Ribbed Strainer Pipes')">
+                        Inquire About Strainer Pipes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 7 Column -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/column.jpg"
+                         alt="Column Pipes">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">07</span>
+
+                    <h3>
+                        Column Pipes
+                    </h3>
+
+                    <p>
+                        Column piping solutions for borewell
+                        and submersible pump applications.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('Column Pipes')">
+                        Inquire About Column Pipes
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 8 Faucets -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/faucets.jpg"
+                         alt="Faucets Showers and Accessories">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">08</span>
+
+                    <h3>
+                        Faucets, Showers & Accessories
+                    </h3>
+
+                    <p>
+                        Faucets, showers and accessories for
+                        bathroom and plumbing requirements.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('Faucets, Showers & Accessories')">
+                        Inquire About Faucets
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 9 DIY -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/diy.jpg"
+                         alt="DIY Range">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">09</span>
+
+                    <h3>
+                        DIY Range
+                    </h3>
+
+                    <p>
+                        Practical products and accessories for
+                        different household and plumbing needs.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('DIY Range')">
+                        Inquire About DIY Range
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 10 Durafix -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/durafix.jpg"
+                         alt="Durafix">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">10</span>
+
+                    <h3>
+                        Durafix
+                    </h3>
+
+                    <p>
+                        Durafix products for suitable plumbing
+                        and installation requirements.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('Durafix')">
+                        Inquire About Durafix
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 11 Vanity -->
+
+            <article class="product-card">
+
+                <div class="product-image">
+                    <img src="images/basins.jpg"
+                         alt="Vanity Cabinets and Basins">
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">11</span>
+
+                    <h3>
+                        Vanity Cabinets & Basins
+                    </h3>
+
+                    <p>
+                        Basins and vanity solutions for
+                        modern bathroom spaces.
+                    </p>
+
+                    <button class="inquire-btn"
+                            onclick="inquireProduct('Vanity Cabinets & Basins')">
+                        Inquire About Basins
+                    </button>
+
+                </div>
+
+            </article>
+
+
+            <!-- 12 Toilet Seats -->
+
+            <article class="product-card featured-card">
+
+                <div class="product-image">
+
+                    <img src="images/toilet-seats.jpg"
+                         alt="Single Suite Toilet Seats">
+
+                    <span class="catalog-badge">
+                        CATALOG
+                    </span>
+
+                </div>
+
+                <div class="product-content">
+
+                    <span class="product-number">12</span>
+
+                    <h3>
+                        Single Suite / Toilet Seats
+                    </h3>
+
+                    <p>
+                        Explore detailed varieties, photographs
+                        and specifications through our catalog.
+                    </p>
+
+                    <a href="#catalog"
+                       class="catalog-btn">
+                        View Catalog
+                    </a>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CATALOG ================= -->
+
+    <section id="catalog" class="section catalog-section">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                PRODUCT CATALOG
+            </span>
+
+            <h2>
+                Single Suite / Toilet Seats
+            </h2>
+
+            <p>
+                Explore the available varieties, product photographs
+                and specifications.
+            </p>
+
+        </div>
+
+
+        <!-- Catalog will be generated by JavaScript -->
+
+        <div id="catalog-container"
+             class="catalog-grid">
+
+        </div>
+
+
+        <!-- Shown until catalog is added -->
+
+        <div id="catalog-empty"
+             class="catalog-empty">
+
+            <div class="empty-icon">
+                CATALOG
+            </div>
+
+            <h3>
+                Catalog Coming Soon
+            </h3>
+
+            <p>
+                Detailed product varieties will appear here
+                once the catalog is added.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= WHY US ================= -->
+
+    <section id="why-us" class="section why-section">
+
+        <div class="section-heading">
+
+            <span class="section-label">
+                WHY CHOOSE ATC
+            </span>
+
+            <h2>
+                Reliable Products. Practical Solutions.
+            </h2>
+
+        </div>
+
+
+        <div class="why-grid">
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    01
+                </div>
+
+                <h3>
+                    Wide Product Range
+                </h3>
+
+                <p>
+                    Multiple piping, plumbing and sanitaryware
+                    categories for different requirements.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    02
+                </div>
+
+                <h3>
+                    Established Brands
+                </h3>
+
+                <p>
+                    Products from brands selected for different
+                    customer and application requirements.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    03
+                </div>
+
+                <h3>
+                    Easy Inquiry
+                </h3>
+
+                <p>
+                    Tell us the brand and type of product
+                    you require directly through WhatsApp.
+                </p>
+
+            </div>
+
+
+            <div class="why-card">
+
+                <div class="why-icon">
+                    04
+                </div>
+
+                <h3>
+                    Customer Focused
+                </h3>
+
+                <p>
+                    Helping customers find suitable products
+                    for their plumbing and sanitaryware needs.
+                </p>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= CONTACT ================= -->
+
+    <section id="contact" class="section contact-section">
+
+        <div class="contact-wrapper">
+
+            <div class="contact-heading">
+
+                <span class="section-label">
+                    CONTACT US
+                </span>
+
+                <h2>
+                    Tell Us What You Need
+                </h2>
+
+                <p>
+                    Looking for a particular product?
+                    Contact Agarwal Trading Company and
+                    tell us the brand and type you require.
+                </p>
+
+            </div>
+
+
+            <div class="contact-details">
+
+
+                <div class="contact-item">
+
+                    <span class="contact-label">
+                        CALL
+                    </span>
+
+                    <a href="tel:9837591626">
+                        9837591626
+                    </a>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-label">
+                        ADDRESS
+                    </span>
+
+                    <p>
+                        Garh Road, Behind K.K Dharam Kata, Hapur
+                    </p>
+
+                </div>
+
+
+                <div class="contact-item">
+
+                    <span class="contact-label">
+                        WHATSAPP
+                    </span>
+
+                    <button class="whatsapp-btn"
+                            onclick="inquireProduct('General Product Inquiry')">
+
+                        Inquire on WhatsApp
+
+                    </button>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer class="footer">
+
+        <div class="footer-inner">
+
+            <img src="images/logo.png"
+                 alt="Agarwal Trading Company"
+                 class="footer-logo">
+
+            <p class="footer-tagline">
+                Built for Better Living.
+            </p>
+
+            <p class="copyright">
+                © <span id="year"></span>
+                Agarwal Trading Company.
+                All Rights Reserved.
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
